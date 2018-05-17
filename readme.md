@@ -5,7 +5,8 @@
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
+This package makes it easy to generate all the files needed for a new object in a laravel project. With one command, it will generate, a Model, Controller, Request, Migration and a folder of views all based on templates that you design based on your workflow.
+
 
 ## Installation
 
@@ -17,15 +18,31 @@ $ composer require johnclendvoy/makeall
 
 ## Usage
 
-## Change log
+``` bash
+$ php artisan make:all ObjectName
+```
+Where `ObjectName` is the singular name of your object. For example, `Event`, `BlogPostComment`, or `PhotoGallery` or whatever you need for your project.
+This single command is the equivalent to running the following commands;
 
-Please see the [changelog](changelog.md) for more information on what has changed recently.
+``` bash
+$ php artisan make:model ObjectName
+$ php artisan make:controler ObjectNameController
+$ php artisan make:request ObjectNameFormRequest
+$ php artisan make:migration create_object_names_table --create=object_names
+$ mkdir ./resources/views/object-name
+$ cd resources/views/object-name
+$ touch index.blade.php
+$ touch show.blade.php
+$ touch create.blade.php
+```
+
 
 ## Testing
 
 ``` bash
 $ composer test
 ```
+Tests coming soon
 
 ## Contributing
 
@@ -37,12 +54,11 @@ If you discover any security related issues, please email author email instead o
 
 ## Credits
 
-- [author name][link-author]
-- [All Contributors][link-contributors]
+- [John C. Lendvoy][http://johnclendvoy.ca]
 
 ## License
 
-license. Please see the [license file](license.md) for more information.
+MIT license. Please see the [license file](license.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/johnclendvoy/makeall.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/johnclendvoy/makeall.svg?style=flat-square

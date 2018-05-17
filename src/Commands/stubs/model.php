@@ -1,0 +1,1 @@
+model for _studly_single

@@ -1,0 +1,41 @@
+{
+    "name": "johnclendvoy/makeall",
+    "description": ":description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "author name",
+            "email": "author email",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/johnclendvoy/makeall",
+    "keywords": ["Laravel", "MakeAll"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "johnclendvoy\\MakeAll\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "johnclendvoy\\MakeAll\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "johnclendvoy\\MakeAll\\MakeAllServiceProvider"
+            ],
+            "aliases": {
+                "MakeAll": "johnclendvoy\\MakeAll\\Facades\\MakeAll"
+            }
+        }
+    }
+}

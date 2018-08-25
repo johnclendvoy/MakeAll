@@ -54,7 +54,7 @@ If you discover any security related issues, please email author email instead o
 
 ## Credits
 
-- [John C. Lendvoy][http://johnclendvoy.ca]
+- [John C. Lendvoy](http://johnclendvoy.ca)
 
 ## License
 

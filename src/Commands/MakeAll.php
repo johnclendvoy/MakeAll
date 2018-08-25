@@ -65,21 +65,9 @@ class MakeAll extends Command
         $snake_single = snake_case($studly_single); // object_name
         $space_single = str_replace('_',' ',$snake_single); // object name
         $title_single = title_case($space_single); // Object Name
-
         $snake_plural = str_plural($snake_single); // object_names
         $kebab_plural = str_plural($kebab_single); // object-names
         $studly_plural = studly_case($snake_plural); // ObjectNames
-
-        // $this->names = [
-        //     '_kebab_single_' => $kebab_single,
-        //     '_studly_single_' => $studly_single,
-        //     '_snake_single_' => $snake_single,
-        //     '_space_single_' => $space_single,
-        //     '_title_single_' => $title_single,
-        //     '_snake_plural_' => $snake_plural,
-        //     '_kebab_plural_' => $kebab_plural,
-        //     '_studly_plural_' => $studly_plural,
-        // ];
 
         $this->names = [
             'object-name' => $kebab_single,
@@ -92,31 +80,37 @@ class MakeAll extends Command
             'ObjectNames' => $studly_plural,
         ];
 
-        foreach($this->names as $key=>$val)
-        {
-            $this->line( $key . ' = '. $val);
-        }
+        // foreach($this->names as $key=>$val)
+        // {
+        //     $this->line( $key . ' = '. $val);
+        // }
 
         // controller
-        $file_name = $this->names['ObjectName'] . 'Controller.php';
-        $this->buildFile('controller.php', $this->controller_path . $file_name);
+        $filename = $this->names['ObjectName'] . 'Controller.php';
+        $this->buildFile('controller.php', $this->controller_path . $filename);
+        $this->info('Created Controller: app/Http/Controllers/'. $filename);
 
         // migration
-        $file_name = date('Y_m_d_H_i_s').'_create_' . $this->names['object_names'] . '_table.php';
-        $destination_path = $this->migration_path .'/'. $file_name;
+        $filename = date('Y_m_d_H_i_s').'_create_' . $this->names['object_names'] . '_table.php';
+        $destination_path = $this->migration_path . $filename;
         $this->buildFile('migration.php', $destination_path);
+        $this->info('Created Migration: database/migrations/'. $filename);
 
         // model
-        $destination_path = $this->model_path.$this->names['ObjectName'].'.php';
+        $filename = $this->names['ObjectName'] . '.php';
+        $destination_path = $this->model_path . $filename;
         $this->buildFile('model.php', $destination_path);
+        $this->info('Created Model: app/'. $filename);
 
         // request
         if(!File::exists($this->request_path)) 
         {
             File::makeDirectory($this->request_path);
         }
-        $destination_path = $this->request_path . $this->names['ObjectName'] . 'FormRequest.php';
+        $filename = $this->names['ObjectName'] . 'FormRequest.php';
+        $destination_path = $this->request_path . $filename;
         $this->buildFile('request.php', $destination_path);
+        $this->info('Created Request: app/Http/Requests/'. $filename);
 
         // views
         $views_folder = $this->views_path.$this->names['object-names'];
@@ -127,9 +121,10 @@ class MakeAll extends Command
         // make each view
         foreach(File::allFiles($this->stub_path . '/views') as $file_path)
         {
-            $file_name = basename($file_path);
-            $destination_path = $views_folder.'/'. $file_name;
-            $this->buildFile('views/'. $file_name, $destination_path);
+            $filename = basename($file_path);
+            $destination_path = $views_folder.'/'. $filename;
+            $this->buildFile('views/'. $filename, $destination_path);
+            $this->info('Created View: resources/views/'.$this->names['object-names'] .'/'. $filename);
         }
     }
 
@@ -143,7 +138,7 @@ class MakeAll extends Command
         $stub_path = $this->stub_path.'/'.$stub_name;
         $content = $this->replaceNames($stub_path);
         File::put($destination, $content);
-        $this->info('Created: '.$destination);
+        // $this->info('Created: '.$destination);
     }
 
     /**

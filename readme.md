@@ -3,7 +3,7 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/johnclendvoy/makeall.svg?style=flat-square)](https://packagist.org/packages/johnclendvoy/makeall)
 
-This package makes it easy to generate all the files needed for a new object in a laravel project. With one command, it will generate, a Model, Controller, Request, Migration and a folder of views all based on templates that you design that work with workflow.
+This package makes it easy to generate all the files needed for a new object in a laravel project. With one command, it will generate, a Model, Controller, Request, Migration and a folder of views all based on templates that you design that work with your workflow.
 
 ## Installation
 
@@ -59,9 +59,9 @@ Tests coming soon
 Please see [contributing.md](contributing.md) for details and a todolist.
 -->
 
-## Security
+## Issues
 
-If you discover any security related issues, please email author email instead of using the issue tracker.
+If you discover any issues, or would like to improve this package, please do not hesitate to email [john.c.lendvoy@gmail.com](john.c.lendvoy@gmail.com) or submit an issue on [github](https://github.com/johnclendvoy/makeall).
 
 ## Credits
 

@@ -58,10 +58,9 @@ class MakeAllServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/makeall.php', 'makeall');
 
         // Register the service the package provides.
-        $this->app->singleton('makeall', function ($app) {
-            return new MakeAll;
-        });
-
+        // $this->app->singleton('makeall', function ($app) {
+        //     return new MakeAll;
+        // });
 
         $this->app->bind('command.make:all', MakeAll::class);
 

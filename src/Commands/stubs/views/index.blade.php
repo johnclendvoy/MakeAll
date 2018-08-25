@@ -1,1 +1,1 @@
-<h1>Index _studly_plural_</h1>
+<h1>Index Object Names</h1>

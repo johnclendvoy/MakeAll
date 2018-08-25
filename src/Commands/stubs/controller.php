@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\_studly_single_;
+use App\ObjectName;
 use Illuminate\Http\Request;
-use Illuminate\Http\Requests_studly_single_FormRequest;
+use Illuminate\Http\RequestsObjectNameFormRequest;
 
-class _studly_single_Controller extends Controller
+class ObjectNameController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class _studly_single_Controller extends Controller
      */
     public function index()
     {
-        $_snake_plural_ = _studly_single_::all();
-        return view('_kebab_single_.index', compact('_snake_plural_'));
+        $object_names = ObjectName::all();
+        return view('object-names.index', compact('object_names'));
     }
 
     /**
@@ -26,8 +26,8 @@ class _studly_single_Controller extends Controller
      */
     public function create()
     {
-        $_snake_single_ = new _studly_single_;
-        return view('_kebab_single_.create', compact('_snake_single_'));
+        $object_name = new ObjectName;
+        return view('object-names.create', compact('object_name'));
     }
 
     /**
@@ -36,9 +36,9 @@ class _studly_single_Controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(_studly_single_FormRequest $request)
+    public function store(ObjectNameFormRequest $request)
     {
-        $_snake_single_ = _studly_single_::create($request->all());
+        $object_name = ObjectName::create($request->all());
         return back();
     }
 
@@ -50,8 +50,8 @@ class _studly_single_Controller extends Controller
      */
     public function show($id)
     {
-        $_snake_single_ = _studly_single_::findOrFail($id);
-        return view('_kebab_single_.show', compact('_snake_single_'));
+        $object_name = ObjectName::findOrFail($id);
+        return view('object-names.show', compact('object_name'));
     }
 
     /**
@@ -62,8 +62,8 @@ class _studly_single_Controller extends Controller
      */
     public function edit($id)
     {
-        $_snake_single_ = _studly_single_::findOrFail($id);
-        return view('_kebab_single_.create', compact('_snake_single_'));
+        $object_name = ObjectName::findOrFail($id);
+        return view('object-names.create', compact('object_name'));
     }
 
     /**
@@ -73,10 +73,10 @@ class _studly_single_Controller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(_studly_single_FormRequest $request, $id)
+    public function update(ObjectNameFormRequest $request, $id)
     {
-        $_snake_single_ = _studly_single_::findOrFail($id);
-        $_snake_single_->update($request->all());
+        $object_name = ObjectName::findOrFail($id);
+        $object_name->update($request->all());
         return back();
     }
 
@@ -88,8 +88,8 @@ class _studly_single_Controller extends Controller
      */
     public function destroy($id)
     {
-        $_snake_single_ = _studly_single_::findOrFail($id);
-        $_snake_single_->delete();
+        $object_name = ObjectName::findOrFail($id);
+        $object_name->delete();
         return back();
     }
 }

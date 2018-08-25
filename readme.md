@@ -5,8 +5,7 @@
 [![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
-This package makes it easy to generate all the files needed for a new object in a laravel project. With one command, it will generate, a Model, Controller, Request, Migration and a folder of views all based on templates that you design based on your workflow.
-
+This package makes it easy to generate all the files needed for a new object in a laravel project. With one command, it will generate, a Model, Controller, Request, Migration and a folder of views all based on templates that you design for your workflow.
 
 ## Installation
 

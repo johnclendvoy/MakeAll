@@ -1,12 +1,12 @@
 {
     "name": "johnclendvoy/makeall",
-    "description": ":description",
-    "license": "license",
+    "description": "A Laravel command to easily create all of the needed files for a new model.",
+    "license": "MIT",
     "authors": [
         {
-            "name": "author name",
-            "email": "author email",
-            "homepage": "author homepage"
+            "name": "John C. Lendvoy",
+            "email": "john.c.lendvoy@gmail.com",
+            "homepage": "https://johnclendvoy.ca"
         }
     ],
     "homepage": "https://github.com/johnclendvoy/makeall",

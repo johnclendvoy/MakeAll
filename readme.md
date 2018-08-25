@@ -1,7 +1,5 @@
 # MakeAll
 
-
-[![Latest Stable Version](https://poser.pugx.org/johnclendvoy/makeall/v/stable?format=flat-square)](https://packagist.org/packages/johnclendvoy/makeall)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/johnclendvoy/makeall.svg?style=flat-square)](https://packagist.org/packages/johnclendvoy/makeall)
 

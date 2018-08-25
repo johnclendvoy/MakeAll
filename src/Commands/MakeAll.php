@@ -58,7 +58,7 @@ class MakeAll extends Command
      */
     public function handle()
     {
-        $name = str_singular($this->argument('name'));
+        $name = str_singular(studly_case($this->argument('name')));
 
         $kebab_single = kebab_case($name); // object-name
         $studly_single = studly_case($name); // ObjectName

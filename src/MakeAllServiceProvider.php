@@ -67,7 +67,6 @@ class MakeAllServiceProvider extends ServiceProvider
         $this->commands([
             'command.make:all',
         ]);
-
     }
 
     /**

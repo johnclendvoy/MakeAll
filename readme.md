@@ -5,7 +5,7 @@
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Total Downloads](https://img.shields.io/packagist/dt/johnclendvoy/makeall.svg?style=flat-square)](https://packagist.org/packages/johnclendvoy/makeall)
 
-This package makes it easy to generate all the files needed for a new object in a laravel project. With one command, it will generate, a Model, Controller, Request, Migration and a folder of views all based on templates that you design for your workflow.
+This package makes it easy to generate all the files needed for a new object in a laravel project. With one command, it will generate, a Model, Controller, Request, Migration and a folder of views all based on templates that you design that work with workflow.
 
 ## Installation
 
@@ -21,7 +21,7 @@ $ composer require johnclendvoy/makeall
 $ php artisan make:all ObjectName
 ```
 Where `ObjectName` is the singular name of your object. For example, `Event`, `BlogPostComment`, or `PhotoGallery` or whatever you need for your project.
-This single command is the equivalent to running the following commands;
+This single command is the equivalent to running the following commands:
 
 ``` bash
 $ php artisan make:model ObjectName
@@ -33,6 +33,19 @@ $ cd resources/views/object-name
 $ touch index.blade.php
 $ touch show.blade.php
 $ touch create.blade.php
+```
+
+The singularity or case of the argument `ObjectName` isn't really important. The following commands are supported and equivalent.
+
+``` bash
+$ php artisan make:all ObjectName
+$ php artisan make:all ObjectNames
+$ php artisan make:all object-name
+$ php artisan make:all object-names
+$ php artisan make:all object_name
+$ php artisan make:all Object_Names
+$ php artisan make:all "object name"
+$ php artisan make:all "Object Names"
 ```
 
 <!---

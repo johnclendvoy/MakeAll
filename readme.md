@@ -1,9 +1,9 @@
 # MakeAll
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
+
+[![Latest Stable Version](https://poser.pugx.org/johnclendvoy/makeall/v/stable?format=flat-square)](https://packagist.org/packages/johnclendvoy/makeall)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Total Downloads](https://img.shields.io/packagist/dt/johnclendvoy/makeall.svg?style=flat-square)](https://packagist.org/packages/johnclendvoy/makeall)
 
 This package makes it easy to generate all the files needed for a new object in a laravel project. With one command, it will generate, a Model, Controller, Request, Migration and a folder of views all based on templates that you design for your workflow.
 
@@ -25,7 +25,7 @@ This single command is the equivalent to running the following commands;
 
 ``` bash
 $ php artisan make:model ObjectName
-$ php artisan make:controler ObjectNameController
+$ php artisan make:controller ObjectNameController
 $ php artisan make:request ObjectNameFormRequest
 $ php artisan make:migration create_object_names_table --create=object_names
 $ mkdir ./resources/views/object-name
@@ -35,7 +35,7 @@ $ touch show.blade.php
 $ touch create.blade.php
 ```
 
-
+<!---
 ## Testing
 
 ``` bash
@@ -46,6 +46,7 @@ Tests coming soon
 ## Contributing
 
 Please see [contributing.md](contributing.md) for details and a todolist.
+-->
 
 ## Security
 
